@@ -92,7 +92,7 @@ export default {
   			}
   		},
   		backgroundImage: {
-  			gradient: 'linear-gradient(to bottom,rgb(106, 44, 145),rgb(182, 79, 131))'
+  			gradient: 'linear-gradient(to bottom,rgb(129, 36, 186),rgb(204, 56, 130))'
   		}
   	}
   },

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -34,6 +35,9 @@ export function Navbar() {
   return (
     <div className="fixed top-0 z-50 w-full bg-transparent">
       <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:grid lg:grid-cols-3">
+        <Link href="/">
+            <Image src="/assets/img/logo-white.png" alt="Logo" width={60} height={60} />
+        </Link>
         <button
           className="block lg:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
