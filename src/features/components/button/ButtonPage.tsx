@@ -34,7 +34,7 @@ export default function ButtonPage() {
             </Breadcrumb>
           </div>
         </header>
-        <HeadMetaData title="Beranda" />
+        <HeadMetaData title="Button" />
         <div className="mx-5 space-y-2">
           <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
             Button

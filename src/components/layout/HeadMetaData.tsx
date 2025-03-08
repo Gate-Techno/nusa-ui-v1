@@ -12,7 +12,7 @@ export const HeadMetaData: React.FC<{
     ogImageUrl,
     pathName = "",
 }) => {
-    const defaultTitle = "Nusa";
+    const defaultTitle = "Nusa UI";
 
     const baseUrl = "https://localhost:3000";
 
@@ -20,11 +20,11 @@ export const HeadMetaData: React.FC<{
 
     return (
         <Head>
-            <title>{title + " | " + defaultTitle}</title>
+            <title>{title + " - " + defaultTitle}</title>
             <link rel="icon" href="/" />
 
             {/* metadata */}
-            <meta name="title" content={title + " | " + defaultTitle} />
+            <meta name="title" content={title + " - " + defaultTitle} />
             <meta name="description" content={metaDescription} />
             <meta name="og:image" content={ogImageUrl} />
             <meta property="og:url" content={pageUrl} />

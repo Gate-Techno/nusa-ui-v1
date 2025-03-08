@@ -10,6 +10,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function NavComponents({
   components,
@@ -21,19 +22,25 @@ export function NavComponents({
 }) {
   const { isMobile } = useSidebar();
 
+  const pathName = usePathname();
+
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarGroupLabel>Components</SidebarGroupLabel>
       <SidebarMenu>
-        {components.map((item) => (
-          <SidebarMenuItem key={item.name}>
-            <SidebarMenuButton asChild>
-              <Link href={`/docs/${item.url === "/" ? "" : item.url}`}>
-                <span>{item.name}</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        ))}
+        {components.map((item) => {
+          const isActive = pathName === `/docs/${item.url === "/" ? "" : item.url}`;
+
+          return (
+            <SidebarMenuItem key={item.name}>
+              <SidebarMenuButton isActive={isActive} asChild>
+                <Link href={`/docs/${item.url === "/" ? "" : item.url}`}>
+                  <span>{item.name}</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          );
+        })}
       </SidebarMenu>
     </SidebarGroup>
   );

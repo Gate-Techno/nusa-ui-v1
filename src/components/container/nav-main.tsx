@@ -3,12 +3,14 @@
 import { type LucideIcon } from "lucide-react";
 
 import {
+  SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function NavMain({
   items,
@@ -17,22 +19,32 @@ export function NavMain({
     title: string;
     url: string;
     icon: LucideIcon;
-    isActive?: boolean;
   }[];
 }) {
+  const pathName = usePathname();
+
+  console.log("kamu berada di:", pathName);
+
   return (
-    <SidebarMenu>
+    <SidebarGroup>
       <SidebarGroupLabel>Getting Started</SidebarGroupLabel>
-      {items.map((item) => (
-        <SidebarMenuItem key={item.title}>
-          <SidebarMenuButton asChild isActive={item.isActive}>
-            <Link href={`/docs${item.url === "/" ? "" : item.url}`}>
-              <item.icon />
-              <span>{item.title}</span>
-            </Link>
-          </SidebarMenuButton>
-        </SidebarMenuItem>
-      ))}
-    </SidebarMenu>
+      <SidebarMenu>
+        {items.map((item) => {
+          const isActive =
+            pathName === `/docs${item.url === "/" ? "" : item.url}`;
+
+          return (
+            <SidebarMenuItem key={item.title}>
+              <SidebarMenuButton isActive={isActive} asChild>
+                <Link href={`/docs${item.url === "/" ? "" : item.url}`}>
+                  <item.icon />
+                  <span>{item.title}</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          );
+        })}
+      </SidebarMenu>
+    </SidebarGroup>
   );
 }
