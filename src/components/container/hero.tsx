@@ -23,8 +23,8 @@ const Hero = () => {
             >
               Dashboard using Pages Router
             </Link> */}
-            <Link href="/dashboard">
-              <Button variant={"default"}>Dashboard using Pages Router</Button>
+            <Link href="/docs">
+              <Button variant={"default"}>Docs using Pages Router</Button>
             </Link>
           </div>
         </div>

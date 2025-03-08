@@ -67,6 +67,14 @@
 
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
 @layer base {
   * {
     @apply border-border scroll-smooth;
