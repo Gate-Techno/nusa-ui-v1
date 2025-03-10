@@ -4,11 +4,13 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 export default {
     darkMode: ["class"],
     content: ["./src/**/*.tsx"],
-	fontFamily: {
-		sans: ['Nunito', 'sans-serif'],
-	},
-  theme: {
-  	extend: {
+	theme: {
+		extend: {
+		  fontFamily: {
+			poppins: ["var(--font-poppins)", ...fontFamily.sans],
+			quicksand: ["var(--font-quickSand)", ...fontFamily.sans],
+			mPlusRounded1c: ["var(--font-mPlusRounded1c)", ...fontFamily.sans],
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

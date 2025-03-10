@@ -15,6 +15,29 @@ import {
 } from "@/components/ui/sidebar";
 
 export default function DocsPage() {
+  const contents = [
+    {
+      title: "Open Code",
+      href: "#",
+    },
+    {
+      title: "Composition",
+      href: "#",
+    },
+    {
+      title: "Distribution",
+      href: "#",
+    },
+    {
+      title: "Beautiful Defaults",
+      href: "#",
+    },
+    {
+      title: "AI-Ready",
+      href: "#",
+    },
+  ];
+
   return (
     <SidebarProvider>
       <SidebarLeft />
@@ -44,7 +67,7 @@ export default function DocsPage() {
           </p>
         </div>
       </SidebarInset>
-      <SidebarRight />
+      <SidebarRight contents={contents} />
     </SidebarProvider>
   );
 }
