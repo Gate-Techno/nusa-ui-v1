@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { Info } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -20,7 +21,9 @@ const Hero = () => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6 md:justify-start">
             <Link href="/docs">
-              <Button variant="default">Docs using Pages Router</Button>
+              <Button variant={"neobrutalism"}>
+                <Info className="mr-1 size-5" fill="none" strokeWidth={3} /> Dashboard
+              </Button>
             </Link>
           </div>
         </div>
