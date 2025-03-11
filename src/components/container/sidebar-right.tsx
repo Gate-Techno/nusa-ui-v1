@@ -35,33 +35,17 @@ const data = {
       items: ["Travel", "Reminders", "Deadlines"],
     },
   ],
-  contents: [
-    {
-      title: "Open Code",
-      href: "#",
-    },
-    {
-      title: "Composition",
-      href: "#",
-    },
-    {
-      title: "Distribution",
-      href: "#",
-    },
-    {
-      title: "Beautiful Defaults",
-      href: "#",
-    },
-    {
-      title: "AI-Ready",
-      href: "#",
-    },
-  ],
 };
 
-export function SidebarRight({
-  ...props
-}: React.ComponentProps<typeof Sidebar>) {
+interface SidebarRightProps
+  extends React.ComponentPropsWithoutRef<typeof Sidebar> {
+  contents?: {
+    title: string;
+    href: string;
+  }[];
+}
+
+export function SidebarRight({ contents, ...props }: SidebarRightProps) {
   return (
     <Sidebar
       collapsible="none"
@@ -74,7 +58,8 @@ export function SidebarRight({
       <SidebarContent className="mx-4">
         <h3 className="text-base font-semibold my-1">On this page</h3>
         <div className="flex flex-col gap-[0.6rem]">
-          {data.contents.map((content) => (
+          {" "}
+          {contents?.map((content) => (
             <a key={content.title} href={content.href}>
               <h4 className="text-sm text-muted-foreground hover:text-white transition-all duration-200">
                 {content.title}
