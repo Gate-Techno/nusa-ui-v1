@@ -75,6 +75,11 @@ html {
   scrollbar-width: none;
 }
 
+.btn-neobrutalism:hover {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
 @layer base {
   * {
     @apply border-border scroll-smooth;
