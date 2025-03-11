@@ -24,7 +24,7 @@ const Hero = () => {
               Dashboard using Pages Router
             </Link> */}
             <Link href="/docs">
-              <Button variant="success" text="Docs using Pages Router"/>
+              <Button variant={"neobrutalism"} text="Dashboard" />
             </Link>
           </div>
         </div>
