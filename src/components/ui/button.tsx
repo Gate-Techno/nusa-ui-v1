@@ -1,23 +1,28 @@
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        default: "bg-white text-[#301a6b] relative rounded-[5px] p-2 pl-4 pr-10 shadow-[0px_5px_0px_0px_#301a6b] hover:bg-[#cbb6e9]",
+        warning:
+          "bg-white text-yellow-400 relative rounded-[5px] p-2 pl-4 pr-10 shadow-[0px_5px_0px_0px_#7a4100] hover:bg-yellow-100",
+        danger:
+          "bg-white text-red-600 relative rounded-[5px] p-2 pl-4 pr-10 shadow-[0px_5px_0px_0px_#991b1b] hover:bg-red-100",
+        success:
+          "bg-white text-green-600 relative rounded-[5px] p-2 pl-4 pr-10 shadow-[0px_5px_0px_0px_#166534] hover:bg-green-100",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "bg-[#261c5c]/20 rounded-[5px] border-2 border-white/70 text-white/70 hover:bg-white/20 hover:text-white",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-[#5635dc] rounded-[5px] text-white hover:bg-[#4020c2]",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        neobrutalism: "btn-neobrutalism bg-white text-purple-800 relative border-2 border-black rounded-[5px] p-2 pl-4 pr-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -31,26 +36,29 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+  asChild?: boolean;
+  text: string;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
+  ({ className, variant, size, asChild = false, text, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
-      />
-    )
+      >
+        {text}
+      </Comp>
+    );
   }
-)
-Button.displayName = "Button"
+);
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };
