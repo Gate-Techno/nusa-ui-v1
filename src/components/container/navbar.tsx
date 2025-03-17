@@ -5,13 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Search, Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
-import { Input } from "../ui/input";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
-    <div className="fixed top-0 z-50 w-full shadow-md">
+    <div className="fixed top-0 z-50 w-full border-b-4">
+      <div className="absolute inset-0 bg-black/10 backdrop-blur-sm w-full h-full"></div>
       <div className="container mx-auto flex items-center justify-between px-10 py-3 relative">
 
         {/* Mobile Menu Toggle */}
