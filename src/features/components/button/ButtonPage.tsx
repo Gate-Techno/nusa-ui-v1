@@ -9,7 +9,7 @@ export default function ButtonPage() {
   return (
     <DocsLayout>
       <HeadMetaData title="Button" />
-        <div className="mx-5 space-y-6 pb-10">
+        <div className="mx-5 space-y-6 pb-10 w-2/3">
           <section className="space-y-3">
             <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
               Button

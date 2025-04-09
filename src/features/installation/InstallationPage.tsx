@@ -1,14 +1,13 @@
-import { HeadMetaData } from "@/components/layout/HeadMetaData";
 import DocsLayout from "@/layouts/DocsLayout";
-
-export default function AccordionPage() {
+import { HeadMetaData } from "@/components/layout/HeadMetaData";
+export default function InstallationPage() {
   return (
     <DocsLayout>
-      <HeadMetaData title="Accordion" />
+      <HeadMetaData title="Installation" />
       <div className="w-2/3 flex flex-col gap-5">
         <div className="mx-5 space-y-2">
           <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight">
-            Accordion
+            Installation
           </h1>
           <p className="text-base text-muted-foreground">
             shadcn/ui is a set of beautifully-designed, accessible components

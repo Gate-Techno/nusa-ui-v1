@@ -1,1 +1,1 @@
-export { default } from '@/features/docs/installation/pages/InstallationPage';
+export { default } from '@/features/installation/InstallationPage';

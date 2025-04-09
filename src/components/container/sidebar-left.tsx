@@ -129,7 +129,7 @@ export function SidebarLeft({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar className="border-r lg:pt-20 md:pt-20" {...props}>
+    <Sidebar className="lg:pt-20 md:pt-20" {...props}>
       {/* <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader> */}
