@@ -94,7 +94,7 @@ export default {
   			}
   		},
   		backgroundImage: {
-  			gradient: 'linear-gradient(to bottom,rgb(129, 36, 186),rgb(204, 56, 130))'
+  			gradient: 'linear-gradient(to bottom,rgb(105, 45, 208),rgb(204, 48, 123))'
   		}
   	}
   },
