@@ -38,7 +38,7 @@ export function NavMain({
               <SidebarMenuButton isActive={isActive} asChild>
                 <Link href={`/docs${item.url === "/" ? "" : item.url}`}>
                   <item.icon />
-                  <span>{item.title}</span>
+                  <span className="text-white">{item.title}</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>

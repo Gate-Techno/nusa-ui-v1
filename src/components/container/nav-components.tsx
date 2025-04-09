@@ -35,7 +35,7 @@ export function NavComponents({
             <SidebarMenuItem key={item.name}>
               <SidebarMenuButton isActive={isActive} asChild>
                 <Link href={`/docs/${item.url === "/" ? "" : item.url}`}>
-                  <span>{item.name}</span>
+                  <span className="text-white">{item.name}</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
