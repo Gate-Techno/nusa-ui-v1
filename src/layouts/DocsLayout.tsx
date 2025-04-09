@@ -44,7 +44,7 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children, sidebarContents }) => {
           <SidebarLeft />
           <SidebarInset>
             <header
-              className="flex items-center gap-2 bg-transparent px-3 pt-20"
+              className="flex items-center gap-2 bg-transparent px-3 pt-20 pb-3"
               aria-hidden="true"
             >
               <SidebarTrigger />
