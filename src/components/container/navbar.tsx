@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Search, Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
-import { Input } from "../ui/input";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);

@@ -13,6 +13,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import NavbarDocs from "@/components/container/navbar-docs";
 
 type SidebarContentItem = {
   title: string;
@@ -33,26 +34,37 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children, sidebarContents }) => {
   ];
 
   return (
-    <div className="bg-gradient min-h-screen">
-      <SidebarProvider>
-        <SidebarLeft />
-        <SidebarInset>
-          <header className="sticky top-0 flex h-14 items-center gap-2 bg-transparent px-3">
-            <SidebarTrigger />
-            <Separator orientation="vertical" className="h-4" />
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="line-clamp-1">Docs</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </header>
-          <main className="p-4">{children}</main>
-        </SidebarInset>
-        <SidebarRight contents={sidebarContents ?? defaultSidebarContent} />
-      </SidebarProvider>
-    </div>
+    <>
+      {/* DOCS NAVBAR */}
+
+      <div className="bg-gradient h-screen flex flex-col">
+        <NavbarDocs />
+        
+        <SidebarProvider>
+          <SidebarLeft />
+          <SidebarInset>
+            <header
+              className="flex items-center gap-2 bg-transparent px-3 py-2"
+              aria-hidden="true"
+            >
+              <SidebarTrigger />
+              <Separator orientation="vertical" className="h-7" />
+              <Breadcrumb>
+                <BreadcrumbList>
+                  <BreadcrumbItem>
+                    <BreadcrumbPage className="line-clamp-1 text-white font-semibold text-base">
+                      Docs
+                    </BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            </header>
+            <main className="p-4 flex-1 overflow-auto">{children}</main>
+          </SidebarInset>
+          <SidebarRight contents={sidebarContents ?? defaultSidebarContent} />
+        </SidebarProvider>
+      </div>
+    </>
   );
 };
 

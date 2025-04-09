@@ -49,12 +49,12 @@ export function SidebarRight({ contents, ...props }: SidebarRightProps) {
   return (
     <Sidebar
       collapsible="none"
-      className="sticky hidden lg:flex top-0 h-svh bg-transparent"
+      className="fixed right-0 top-0 h-svh bg-transparent hidden lg:flex pt-20"
       {...props}
     >
-      <SidebarHeader className="h-16 border-sidebar-border">
+      {/* <SidebarHeader className="h-16 border-sidebar-border">
         <NavUser user={data.user} />
-      </SidebarHeader>
+      </SidebarHeader> */}
       <SidebarContent className="mx-4">
         <h3 className="text-base font-semibold my-1">On this page</h3>
         <div className="flex flex-col gap-[0.6rem]">

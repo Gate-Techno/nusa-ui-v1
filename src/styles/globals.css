@@ -73,6 +73,10 @@
 
 html {
   scrollbar-width: none;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .btn-neobrutalism:hover {
@@ -82,44 +86,10 @@ html {
 
 @layer base {
   * {
-    @apply border-border scroll-smooth;
+    @apply border-border scroll-smooth outline-ring/50;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-white;
   }
-}
-
-
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-
-  }
-
-  body {
-    @apply bg-background text-foreground;
-
-  }
-
-}
-
-
-
-
-
-
-
-@layer base {
-  * {
-    @apply border-border;
-
-  }
-
-  body {
-    @apply bg-background text-foreground;
-
-  }
-
 }
