@@ -30,7 +30,7 @@ export function NavSecondary({
               <SidebarMenuButton asChild>
                 <a href={item.url}>
                   <item.icon />
-                  <span>{item.title}</span>
+                  <span className="text-white">{item.title}</span>
                 </a>
               </SidebarMenuButton>
               {item.badge && <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>}

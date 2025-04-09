@@ -29,7 +29,7 @@ export default function NavbarDocs() {
 
   return (
     <header
-      className="px-5 border-grid sticky top-0 z-50 w-full border-b bg-transparent backdrop-blur-md"
+      className="px-5 border-grid fixed top-0 z-50 w-full border-b bg-transparent backdrop-blur-md"
       aria-hidden="true"
     >
       <div className="container-wrapper">
