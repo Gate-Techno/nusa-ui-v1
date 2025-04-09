@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { HeadMetaData } from "@/components/layout/HeadMetaData";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tab";
 import { ArrowRight, Check, ChevronRight, ExternalLink, Github } from "lucide-react";
 import DocsLayout from "@/layouts/DocsLayout";
 
@@ -9,139 +9,138 @@ export default function ButtonPage() {
   return (
     <DocsLayout>
       <HeadMetaData title="Button" />
-        <div className="mx-5 space-y-6 pb-10">
-          <section className="space-y-3">
-            <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
-              Button
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              A customizable button component with multiple variants and sizes, perfect for actions and interactive elements.
-            </p>
-          </section>
+      <div className="mx-5 space-y-6 pb-10">
+        <section className="space-y-3">
+          <h1 className="scroll-m-20 text-3xl text-white font-bold tracking-tight">
+            Button
+          </h1>
+          <p className="text-white">
+            A customizable button component with multiple variants and sizes, perfect for actions and interactive elements.
+          </p>
+        </section>
 
-          <Tabs defaultValue="preview" className="w-full">
-            <TabsList className="w-full max-w-md">
-              <TabsTrigger value="preview" className="flex-1">Preview</TabsTrigger>
-              <TabsTrigger value="code" className="flex-1">Code</TabsTrigger>
-              <TabsTrigger value="usage" className="flex-1">Usage</TabsTrigger>
-            </TabsList>
+        <Tabs variant="default" defaultValue="preview" className="w-full">
+          <TabsList className="grid w-full grid-cols-3">
+            <TabsTrigger value="preview" className="flex-1">Preview</TabsTrigger>
+            <TabsTrigger value="code" className="flex-1">Code</TabsTrigger>
+            <TabsTrigger value="usage" className="flex-1">Usage</TabsTrigger>
+          </TabsList>
 
-            <TabsContent value="preview" className="pt-4">
-              <section className="space-y-8">
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold">Variants</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="default">Default</Button>
-                      <span className="text-sm text-muted-foreground">Default</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="warning">Warning</Button>
-                      <span className="text-sm text-muted-foreground">Warning</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="danger">Danger</Button>
-                      <span className="text-sm text-muted-foreground">Danger</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="success">Success</Button>
-                      <span className="text-sm text-muted-foreground">Success</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg bg-gray-800">
-                      <Button variant="outline">Outline</Button>
-                      <span className="text-sm text-muted-foreground">Outline</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="secondary">Secondary</Button>
-                      <span className="text-sm text-muted-foreground">Secondary</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="ghost">Ghost</Button>
-                      <span className="text-sm text-muted-foreground">Ghost</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="link">Link</Button>
-                      <span className="text-sm text-muted-foreground">Link</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="neobrutalism">Neobrutalism</Button>
-                      <span className="text-sm text-muted-foreground">Neobrutalism</span>
-                    </div>
+          <TabsContent value="preview" className="pt-4">
+            <section className="space-y-8">
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="default">Default</Button>
+                    <span className="text-sm text-white">Default</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="warning">Warning</Button>
+                    <span className="text-sm text-white">Warning</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="danger">Danger</Button>
+                    <span className="text-sm text-white">Danger</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="success">Success</Button>
+                    <span className="text-sm text-white">Success</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg bg-gray-800">
+                    <Button variant="outline">Outline</Button>
+                    <span className="text-sm text-white">Outline</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="secondary">Secondary</Button>
+                    <span className="text-sm text-white">Secondary</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="ghost">Ghost</Button>
+                    <span className="text-sm text-white">Ghost</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="link">Link</Button>
+                    <span className="text-sm text-white">Link</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="neobrutalism">Neobrutalism</Button>
+                    <span className="text-sm text-white">Neobrutalism</span>
                   </div>
                 </div>
+              </div>
 
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold">Sizes</h2>
-                  <div className="flex flex-wrap gap-4">
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button size="sm">Small</Button>
-                      <span className="text-sm text-muted-foreground">Small</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button size="default">Default</Button>
-                      <span className="text-sm text-muted-foreground">Default</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button size="lg">Large</Button>
-                      <span className="text-sm text-muted-foreground">Large</span>
-                    </div>
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold">Sizes</h2>
+                <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button size="sm">Small</Button>
+                    <span className="text-sm text-white">Small</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button size="default">Default</Button>
+                    <span className="text-sm text-white">Default</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button size="lg">Large</Button>
+                    <span className="text-sm text-white">Large</span>
                   </div>
                 </div>
+              </div>
 
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold">With Icons</h2>
-                  <div className="flex flex-wrap gap-4">
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button>
-                        Next <ArrowRight className="h-4 w-4" />
-                      </Button>
-                      <span className="text-sm text-muted-foreground">Right Icon</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="secondary">
-                        <Github className="h-4 w-4" /> GitHub
-                      </Button>
-                      <span className="text-sm text-muted-foreground">Left Icon</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button variant="outline">
-                        <Check className="h-4 w-4" /> Save Changes
-                      </Button>
-                      <span className="text-sm text-muted-foreground">With Action</span>
-                    </div>
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold">With Icons</h2>
+                <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button>
+                      Next <ArrowRight className="h-4 w-4" />
+                    </Button>
+                    <span className="text-sm text-white">Right Icon</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="secondary">
+                      <Github className="h-4 w-4" /> GitHub
+                    </Button>
+                    <span className="text-sm text-white">Left Icon</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button variant="outline">
+                      <Check className="h-4 w-4" /> Save Changes
+                    </Button>
+                    <span className="text-sm text-white">With Action</span>
                   </div>
                 </div>
+              </div>
 
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold">States</h2>
-                  <div className="flex flex-wrap gap-4">
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
-                      <Button disabled>Disabled</Button>
-                      <span className="text-sm text-muted-foreground">Disabled</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg bg-gray-800">
-                      <Button variant="outline" disabled>Disabled Outline</Button>
-                      <span className="text-sm text-muted-foreground">Disabled Outline</span>
-                    </div>
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold">States</h2>
+                <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg">
+                    <Button disabled>Disabled</Button>
+                    <span className="text-sm text-white">Disabled</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 p-4 bg-muted/20 rounded-lg bg-gray-800">
+                    <Button variant="outline" disabled>Disabled Outline</Button>
+                    <span className="text-sm text-white">Disabled Outline</span>
                   </div>
                 </div>
-              </section>
-            </TabsContent>
+              </div>
+            </section>
+          </TabsContent>
 
-            <TabsContent value="code" className="pt-4">
-              <div className="space-y-6">
-                <div className="rounded-md bg-muted p-4 relative">
-                  <button
-                    className="absolute top-2 right-2 p-1 bg-muted-foreground/20 hover:bg-muted-foreground/30 rounded-md text-xs"
-                    onClick={() => {
-                      navigator.clipboard.writeText(document.querySelector('.code-block').textContent);
-                    }}
-                  >
-                    Copy
-                  </button>
-                  <div className="max-h-[70vh] overflow-hidden">
-                    <pre className="text-sm overflow-auto max-h-full code-block">
-                    {`import * as React from "react";
+          <TabsContent value="code" className="pt-4">
+            <div className="space-y-6">
+              <div className="rounded-md bg-muted p-4 relative">
+                <button
+                  className="absolute top-2 right-2 p-1 bg-muted-foreground/20 hover:bg-muted-foreground/30 rounded-md text-xs"
+                  onClick={() => {
+                    navigator.clipboard.writeText(document.querySelector('.code-block').textContent);
+                  }}
+                >
+                  Copy
+                </button>
+                <div className="max-h-[70vh] overflow-y-auto">
+                  <pre className="text-sm code-block whitespace-pre-wrap break-all">
+{`import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
@@ -162,9 +161,12 @@ const buttonVariants = cva(
           "bg-white text-green-600 relative rounded-[5px] p-2 pl-4 pr-10 shadow-[0px_5px_0px_0px_#166534] hover:bg-green-100",
         outline:
           "bg-[#261c5c]/20 rounded-[5px] border-2 border-white/70 text-white/70 hover:bg-white/20 hover:text-white",
-        secondary: "bg-[#5635dc] rounded-[5px] text-white hover:bg-[#4020c2]",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        secondary: 
+          "bg-[#5635dc] rounded-[5px] text-white hover:bg-[#4020c2]",
+        ghost: 
+          "hover:bg-accent hover:text-accent-foreground",
+        link: 
+          "text-primary underline-offset-4 hover:underline",
         neobrutalism:
           "btn-neobrutalism transition-all duration-200 bg-white text-purple-800 relative border-2 border-black rounded-[5px] p-2 pl-4 pr-10 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]",
       },
@@ -204,17 +206,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 
 export { Button, buttonVariants };`}
-                    </pre>
-                  </div>
+                  </pre>
                 </div>
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold">Usage Examples</h2>
+              </div>
+              
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold">Usage Examples</h2>
 
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-medium">Basic Button</h3>
-                    <div className="rounded-md bg-muted p-4">
-                      <pre className="text-sm">
-                        {`import { Button } from "@/components/ui/button";
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium">Basic Button</h3>
+                  <div className="rounded-md bg-muted p-4">
+                    <div className="overflow-x-auto">
+                      <pre className="text-sm whitespace-pre-wrap break-words">
+{`import { Button } from "@/components/ui/button";
 
 export function ButtonDemo() {
   return <Button>Click me</Button>;
@@ -222,12 +226,14 @@ export function ButtonDemo() {
                       </pre>
                     </div>
                   </div>
+                </div>
 
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-medium">Button with Different Variants</h3>
-                    <div className="rounded-md bg-muted p-4">
-                      <pre className="text-sm">
-                        {`import { Button } from "@/components/ui/button";
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium">Button with Different Variants</h3>
+                  <div className="rounded-md bg-muted p-4">
+                    <div className="overflow-x-auto">
+                      <pre className="text-sm whitespace-pre-wrap break-words">
+{`import { Button } from "@/components/ui/button";
 
 export function ButtonVariants() {
   return (
@@ -245,12 +251,14 @@ export function ButtonVariants() {
                       </pre>
                     </div>
                   </div>
+                </div>
 
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-medium">Button with Icons</h3>
-                    <div className="rounded-md bg-muted p-4">
-                      <pre className="text-sm">
-                        {`import { Button } from "@/components/ui/button";
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium">Button with Icons</h3>
+                  <div className="rounded-md bg-muted p-4">
+                    <div className="overflow-x-auto">
+                      <pre className="text-sm whitespace-pre-wrap break-words">
+{`import { Button } from "@/components/ui/button";
 import { ArrowRight, Github } from "lucide-react";
 
 export function ButtonWithIcons() {
@@ -270,18 +278,20 @@ export function ButtonWithIcons() {
                   </div>
                 </div>
               </div>
-            </TabsContent>
+            </div>
+          </TabsContent>
 
-            <TabsContent value="usage" className="pt-4 space-y-6">
-              <div className="space-y-4">
-                <h2 className="text-xl font-semibold">API Reference</h2>
-                <div className="rounded-md bg-muted p-6">
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-medium">Button Props</h3>
-                    <p className="text-sm text-muted-foreground">
-                      The Button component extends the HTML button element with the following additional props:
-                    </p>
-                    <div className="border rounded-md overflow-hidden">
+          <TabsContent value="usage" className="pt-4 space-y-6">
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">API Reference</h2>
+              <div className="rounded-md bg-muted p-6">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium">Button Props</h3>
+                  <p className="text-sm text-muted-foreground">
+                    The Button component extends the HTML button element with the following additional props:
+                  </p>
+                  <div className="border rounded-md overflow-hidden">
+                    <div className="overflow-x-auto">
                       <table className="w-full text-sm">
                         <thead className="bg-muted/50">
                           <tr>
@@ -334,18 +344,20 @@ export function ButtonWithIcons() {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="space-y-4">
-                <h2 className="text-xl font-semibold">Examples</h2>
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Examples</h2>
 
-                <div className="space-y-3">
-                  <h3 className="text-lg font-medium">Link Button</h3>
-                  <p className="text-sm text-muted-foreground">
-                    You can use the button as a link by setting the asChild prop and nesting an anchor tag.
-                  </p>
-                  <div className="rounded-md bg-muted p-4">
-                    <pre className="text-sm">
-                      {`import { Button } from "@/components/ui/button";
+              <div className="space-y-3">
+                <h3 className="text-lg font-medium">Link Button</h3>
+                <p className="text-sm text-muted-foreground">
+                  You can use the button as a link by setting the asChild prop and nesting an anchor tag.
+                </p>
+                <div className="rounded-md bg-muted p-4">
+                  <div className="overflow-x-auto">
+                    <pre className="text-sm whitespace-pre-wrap break-words">
+{`import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function LinkButton() {
@@ -360,15 +372,17 @@ export function LinkButton() {
                     </pre>
                   </div>
                 </div>
+              </div>
 
-                <div className="space-y-3">
-                  <h3 className="text-lg font-medium">Form Submit Button</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Use the button as a form submit button with a loading state.
-                  </p>
-                  <div className="rounded-md bg-muted p-4">
-                    <pre className="text-sm">
-                      {`import { useState } from "react";
+              <div className="space-y-3">
+                <h3 className="text-lg font-medium">Form Submit Button</h3>
+                <p className="text-sm text-muted-foreground">
+                  Use the button as a form submit button with a loading state.
+                </p>
+                <div className="rounded-md bg-muted p-4">
+                  <div className="overflow-x-auto">
+                    <pre className="text-sm whitespace-pre-wrap break-words">
+{`import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 
@@ -403,29 +417,30 @@ export function SubmitButton() {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="space-y-4">
-                <h2 className="text-xl font-semibold">Design Details</h2>
-                <div className="bg-muted/20 rounded-lg p-6 space-y-4">
-                  <h3 className="text-lg font-medium">Shadow and Hover Effects</h3>
-                  <p className="text-sm text-muted-foreground">
-                    The button variants use shadow effects to create depth. The default, warning, danger, and success variants use a shadow with the corresponding color. The neobrutalism variant uses a black shadow for a distinctive look.
-                  </p>
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Design Details</h2>
+              <div className="bg-muted/20 rounded-lg p-6 space-y-4">
+                <h3 className="text-lg font-medium">Shadow and Hover Effects</h3>
+                <p className="text-sm text-muted-foreground">
+                  The button variants use shadow effects to create depth. The default, warning, danger, and success variants use a shadow with the corresponding color. The neobrutalism variant uses a black shadow for a distinctive look.
+                </p>
 
-                  <h3 className="text-lg font-medium">3D Button Effect</h3>
-                  <p className="text-sm text-muted-foreground">
-                    The default button style includes a 3D-like effect with a 5px shadow at the bottom. This creates a tactile, push-button appearance that enhances user interaction feedback.
-                  </p>
+                <h3 className="text-lg font-medium">3D Button Effect</h3>
+                <p className="text-sm text-muted-foreground">
+                  The default button style includes a 3D-like effect with a 5px shadow at the bottom. This creates a tactile, push-button appearance that enhances user interaction feedback.
+                </p>
 
-                  <h3 className="text-lg font-medium">Colors and Accessibility</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Each button variant uses colors that maintain good contrast ratios for accessibility. The text color is chosen to ensure readability against the background color.
-                  </p>
-                </div>
+                <h3 className="text-lg font-medium">Colors and Accessibility</h3>
+                <p className="text-sm text-muted-foreground">
+                  Each button variant uses colors that maintain good contrast ratios for accessibility. The text color is chosen to ensure readability against the background color.
+                </p>
               </div>
-            </TabsContent>
-          </Tabs>
-        </div>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </div>
     </DocsLayout>
   );
 }

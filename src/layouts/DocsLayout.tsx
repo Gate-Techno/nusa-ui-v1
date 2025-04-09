@@ -48,9 +48,9 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children, sidebarContents }) => {
               </BreadcrumbList>
             </Breadcrumb>
           </header>
-          <main className="p-4">{children}</main>
+          <main className="px-36">{children}</main>
         </SidebarInset>
-        <SidebarRight contents={sidebarContents ?? defaultSidebarContent} />
+        {/* <SidebarRight contents={sidebarContents ?? defaultSidebarContent} /> */}
       </SidebarProvider>
     </div>
   );

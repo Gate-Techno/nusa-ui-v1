@@ -95,12 +95,12 @@ const data = {
       url: "components/accordion",
     },
     {
-      name: "Button",
-      url: "components/button",
-    },
-    {
       name: "Alert",
       url: "components/alert",
+    },
+    {
+      name: "Button",
+      url: "components/button",
     },
     {
       name: "Card",
@@ -114,13 +114,19 @@ const data = {
       name: "Form",
       url: "components/form",
     },
+    
+    {
+      name: "Modal",
+      url: "components/modal",
+    },
     {
       name: "Pagination",
       url: "components/pagination",
     },
+    
     {
-      name: "Modal",
-      url: "components/modal",
+      name: "Tab",
+      url: "components/tab",
     },
   ],
 };
