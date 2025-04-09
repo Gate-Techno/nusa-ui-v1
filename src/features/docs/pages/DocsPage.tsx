@@ -13,8 +13,18 @@ export default function DocsPage() {
   return (
     <DocsLayout sidebarContents={sidebarContents}>
       <HeadMetaData title="Docs" />
-      <div className="mx-5 space-y-2">
-        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">
+      <div className="mx-5 space-y-2 min-h-screen">
+        <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight">
+          Introduction
+        </h1>
+        <p className="text-base text-muted-foreground w-2/3">
+          shadcn/ui is a set of beautifully-designed, accessible components and
+          a code distribution platform. Works with your favorite frameworks and
+          AI models. Open Source. Open Code.
+        </p>
+      </div>
+      <div className="mx-5 space-y-2 min-h-screen">
+        <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight">
           Introduction
         </h1>
         <p className="text-base text-muted-foreground w-2/3">

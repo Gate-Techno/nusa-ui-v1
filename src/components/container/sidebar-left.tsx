@@ -129,12 +129,12 @@ export function SidebarLeft({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar className="border-r-0 border-r-transparent" {...props}>
-      <SidebarHeader>
+    <Sidebar className="border-r lg:pt-20 md:pt-20" {...props}>
+      {/* <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
+      </SidebarHeader> */}
+      <SidebarContent className="px-5">
         <NavMain items={data.navMain} />
-      </SidebarHeader>
-      <SidebarContent>
         <NavComponents components={data.components} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
