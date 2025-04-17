@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import { SidebarLeft } from "@/components/container/sidebar-left";
-import { SidebarRight } from "@/components/container/sidebar-right";
+import { NavigationContent } from "@/components/container/navigation-content";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -61,7 +61,7 @@ const DocsLayout: FC<DocsLayoutProps> = ({ children, sidebarContents }) => {
             </header>
             <main className="p-4 flex-1 overflow-auto">{children}</main>
           </SidebarInset>
-          <SidebarRight contents={sidebarContents ?? defaultSidebarContent} />
+          <NavigationContent contents={sidebarContents ?? defaultSidebarContent} />
         </SidebarProvider>
       </div>
     </>

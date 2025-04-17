@@ -39,7 +39,7 @@ const data = {
   ],
 };
 
-interface SidebarRightProps
+interface NavigationContentProps
   extends React.ComponentPropsWithoutRef<typeof Sidebar> {
   contents?: {
     title: string;
@@ -47,7 +47,7 @@ interface SidebarRightProps
   }[];
 }
 
-export function SidebarRight({ contents, ...props }: SidebarRightProps) {
+export function NavigationContent({ contents, ...props }: NavigationContentProps) {
   return (
     <Sidebar
       collapsible="none"

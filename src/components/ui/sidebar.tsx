@@ -537,6 +537,10 @@ const sidebarMenuButtonVariants = cva(
         sm: "h-7 text-xs",
         lg: "h-12 text-sm group-data-[collapsible=icon]:!p-0",
       },
+      isActive: {
+        true: "bg-[#3f1d7a]/50 text-white",
+        false: "",
+      },
     },
     defaultVariants: {
       variant: "default",
@@ -574,7 +578,7 @@ const SidebarMenuButton = React.forwardRef<
         data-sidebar="menu-button"
         data-size={size}
         data-active={isActive}
-        className={cn(sidebarMenuButtonVariants({ variant, size }), className)}
+        className={cn(sidebarMenuButtonVariants({ variant, size, isActive }), className)}
         {...props}
       />
     )
