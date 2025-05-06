@@ -36,7 +36,7 @@ export default function NavbarDocs() {
         <div className="container flex h-14 items-center gap-2 md:gap-4">
           {/* Logo & Desktop Navigation */}
           <div className="mr-4 hidden md:flex">
-            <a className="mr-4 flex items-center gap-2 lg:mr-6" href="/">
+            <Link className="mr-4 flex items-center gap-2 lg:mr-6" href="/">
               <Image
                 src="/assets/img/logo-white.png"
                 alt="Logo"
@@ -44,7 +44,7 @@ export default function NavbarDocs() {
                 height={40}
               />
               <span className="hidden font-bold lg:inline-block">nusa/ui</span>
-            </a>
+            </Link>
             <nav className="flex items-center gap-4 text-sm xl:gap-6">
               {navItems.map((item) => {
                 const href = `/${item.toLowerCase()}`;
@@ -130,7 +130,7 @@ export default function NavbarDocs() {
               </button>
             </div>
             <nav className="flex items-center gap-0.5">
-              <a
+              <Link
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground h-8 w-8 px-0"
@@ -142,7 +142,7 @@ export default function NavbarDocs() {
                     d="M409.132 114.573c-19.608-33.596..."
                   />
                 </svg>
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

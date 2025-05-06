@@ -2,7 +2,7 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { HeadMetaData } from "@/components/meta/HeadMetaData";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowRight, Check, ChevronRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Check, Github } from "lucide-react";
 import DocsLayout from "@/components/templates/DocsLayout";
 
 export default function ButtonPage() {
@@ -134,7 +134,10 @@ export default function ButtonPage() {
                   <button
                     className="absolute top-2 right-2 p-1 bg-muted-foreground/20 hover:bg-muted-foreground/30 rounded-md text-xs"
                     onClick={() => {
-                      navigator.clipboard.writeText(document.querySelector('.code-block').textContent);
+                      const codeBlock = document.querySelector('.code-block');
+                      if (codeBlock && codeBlock.textContent) {
+                        navigator.clipboard.writeText(codeBlock.textContent);
+                      }
                     }}
                   >
                     Copy

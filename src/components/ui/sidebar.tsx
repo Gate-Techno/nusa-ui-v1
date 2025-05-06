@@ -16,7 +16,6 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet"
 import { Skeleton } from "@/components/ui/skeleton"
-import { default } from '../../../tailwind.config';
 import {
   Tooltip,
   TooltipContent,

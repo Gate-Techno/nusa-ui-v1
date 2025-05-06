@@ -16,29 +16,6 @@ import {
   HoverCardTrigger,
 } from "../ui/hover-card";
 
-const data = {
-  user: {
-    name: "Picerld",
-    email: "picerld@local.gg",
-    avatar:
-      "https://avatars.githubusercontent.com/u/155806349?s=400&u=cb7edbf14c9714664328766409d1ec71449f8430&v=4",
-  },
-  calendars: [
-    {
-      name: "My Calendars",
-      items: ["Personal", "Work", "Family"],
-    },
-    {
-      name: "Favorites",
-      items: ["Holidays", "Birthdays"],
-    },
-    {
-      name: "Other",
-      items: ["Travel", "Reminders", "Deadlines"],
-    },
-  ],
-};
-
 interface NavigationContentProps
   extends React.ComponentPropsWithoutRef<typeof Sidebar> {
   contents?: {

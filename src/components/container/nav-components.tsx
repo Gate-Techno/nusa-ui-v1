@@ -4,10 +4,8 @@ import {
   SidebarGroup,
   SidebarGroupLabel,
   SidebarMenu,
-  SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -20,7 +18,6 @@ export function NavComponents({
     url: string;
   }[];
 }) {
-  const { isMobile } = useSidebar();
 
   const pathName = usePathname();
 

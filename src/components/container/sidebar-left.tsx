@@ -9,7 +9,6 @@ import {
   Home,
   Inbox,
   MessageCircleQuestion,
-  Search,
   Settings2,
   Sparkles,
   Trash2,
@@ -18,11 +17,9 @@ import {
 import { NavComponents } from "@/components/container/nav-components";
 import { NavMain } from "@/components/container/nav-main";
 import { NavSecondary } from "@/components/container/nav-secondary";
-import { TeamSwitcher } from "@/components/container/team-switcher";
 import {
   Sidebar,
   SidebarContent,
-  SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
 
