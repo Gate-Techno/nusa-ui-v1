@@ -14,7 +14,7 @@ export const HeadMetaData: React.FC<{
 }) => {
     const defaultTitle = "Nusa UI";
 
-    const baseUrl ="nusa-ui-v1.vercel.app";
+    const baseUrl ="https://nusa-ui-v1.vercel.app";
 
     const pageUrl = new URL(pathName, baseUrl).toString();
 
