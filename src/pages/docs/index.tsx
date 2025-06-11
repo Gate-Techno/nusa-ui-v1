@@ -29,7 +29,7 @@ export default function DocsPage() {
             Introduction
           </h1>
           <p className="text-base text-muted-foreground">
-            shadcn/ui is a set of beautifully-designed, accessible components
+            nusa/ui is a set of beautifully-designed, accessible components
             and a code distribution platform. Works with your favorite
             frameworks and AI models. Open Source. Open Code.
           </p>

@@ -11,6 +11,9 @@ export default {
 			quicksand: ["var(--font-quickSand)", ...fontFamily.sans],
 			mPlusRounded1c: ["var(--font-mPlusRounded1c)", ...fontFamily.sans],
 		},
+		fontWeight: {
+			morebold: '900',
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

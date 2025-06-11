@@ -520,24 +520,24 @@ const SidebarMenuItem = React.forwardRef<
 SidebarMenuItem.displayName = "SidebarMenuItem"
 
 const sidebarMenuButtonVariants = cva(
-  "flex w-full items-center gap-3 rounded-xl border border-purple-500 bg-[#3f1d7a] p-2 transition hover:bg-purple-600/50 hover:text-white text-purple-300 text-sm font-medium",
+  "flex w-full items-center gap-3 border border-purple-500 bg-[#CAB9E2FF] shadow-md px-2 py-5 transition hover:bg-purple-600/50 hover:text-white text-purple-300 text-sm font-medium rounded-r-md rounded-l-3xl",
   {
     variants: {
       variant: {
         size: {
           default: "h-14",
         },
-        default: "hover:bg-[#3f1d7a]/50 hover:text-sidebar-accent-foreground",
+        default: "hover:bg-[#CAB9E2FF]/50 hover:text-sidebar-accent-foreground",
         outline:
           "bg-background shadow-[0_0_0_1px_hsl(var(--sidebar-border))] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]",
       },
       size: {
         default: "h-8 text-sm",
         sm: "h-7 text-xs",
-        lg: "h-12 text-sm group-data-[collapsible=icon]:!p-0",
+        lg: "h-10 group-data-[collapsible=icon]:!p-0",
       },
       isActive: {
-        true: "bg-[#3f1d7a]/50 text-white",
+        true: "bg-[#CAB9E2FF]/50 text-white",
         false: "",
       },
     },
@@ -561,7 +561,7 @@ const SidebarMenuButton = React.forwardRef<
       asChild = false,
       isActive = false,
       variant = "default",
-      size = "default",
+      size = "lg",
       tooltip,
       className,
       ...props

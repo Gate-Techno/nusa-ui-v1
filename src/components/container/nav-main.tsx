@@ -23,8 +23,6 @@ export function NavMain({
 }) {
   const pathName = usePathname();
 
-  console.log("kamu berada di:", pathName);
-
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Getting Started</SidebarGroupLabel>
@@ -37,8 +35,10 @@ export function NavMain({
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton isActive={isActive} asChild>
                 <Link href={`/docs${item.url === "/" ? "" : item.url}`}>
-                  <item.icon />
-                  <span className="text-white">{item.title}</span>
+                  <item.icon className="text-[#301a6b] size-6 mr-2" />
+                  <span className="text-[#301a6b] text-[0.84rem] font-morebold uppercase">
+                    {item.title}
+                  </span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>

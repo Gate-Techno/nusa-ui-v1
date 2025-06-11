@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/sonner";
 const mPlusRounded1c = M_PLUS_Rounded_1c({
   subsets: ["latin"],
   variable: "--font-mPlusRounded1c",
-  weight: ["700", "800"],
+  weight: ["700", "800", "900"],
   display: "swap",
 });
 
