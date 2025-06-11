@@ -19,12 +19,30 @@ export default function NavbarDocs() {
   const pathName = usePathname();
 
   const navItems = [
-    "Docs",
-    "Components",
-    "Blocks",
-    "Charts",
-    "Themes",
-    "Colors",
+    {
+      name: "Docs",
+      href: "/docs",
+    },
+    {
+      name: "Components",
+      href: "/docs/components/accordion",
+    },
+    {
+      name: "Blocks",
+      href: "/docs/blocks",
+    },
+    {
+      name: "Charts",
+      href: "/docs/charts",
+    },
+    {
+      name: "Themes",
+      href: "/docs/themes",
+    },
+    {
+      name: "Colors",
+      href: "/docs/colors",
+    },
   ];
 
   return (
@@ -47,18 +65,17 @@ export default function NavbarDocs() {
             </a>
             <nav className="flex items-center gap-4 text-sm xl:gap-6">
               {navItems.map((item) => {
-                const href = `/${item.toLowerCase()}`;
-                const isActive = pathName.includes(href);
+                const isActive = pathName.includes(item.href);
 
                 return (
                   <Link
-                    key={item}
-                    href={href}
+                    key={item.name}
+                    href={item.href}
                     className={`transition-colors hover:text-foreground/90 ${
                       isActive ? "text-white" : "text-foreground"
                     }`}
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 );
               })}
@@ -96,20 +113,19 @@ export default function NavbarDocs() {
                 <div className="max-h-[75vh] overflow-y-auto">
                   <DrawerDescription className="space-y-2">
                     {navItems.map((item) => {
-                      const href = `/${item.toLowerCase()}`;
-                      const isActive = pathName.includes(href);
+                      const isActive = pathName.includes(item.href);
 
                       return (
                         <Link
-                          key={item}
-                          href={href}
-                          className={`block py-2 text-lg font-medium transition-colors rounded-md ${
+                          key={item.name}
+                          href={item.href}
+                          className={`block py-2 text-lg font-base transition-colors rounded-md ${
                             isActive
-                              ? "text-foreground font-bold"
-                              : "text-muted-foreground hover:text-foreground/80"
+                              ? "text-black font-bold"
+                              : "text-black hover:text-foreground/90"
                           }`}
                         >
-                          {item}
+                          {item.name}
                         </Link>
                       );
                     })}

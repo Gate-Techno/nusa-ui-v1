@@ -29,13 +29,16 @@ export function NavComponents({
       <SidebarGroupLabel>Components</SidebarGroupLabel>
       <SidebarMenu>
         {components.map((item) => {
-          const isActive = pathName === `/docs/${item.url === "/" ? "" : item.url}`;
+          const isActive =
+            pathName === `/docs/${item.url === "/" ? "" : item.url}`;
 
           return (
             <SidebarMenuItem key={item.name}>
               <SidebarMenuButton isActive={isActive} asChild>
                 <Link href={`/docs/${item.url === "/" ? "" : item.url}`}>
-                  <span className="text-white">{item.name}</span>
+                  <span className="text-[#301a6b] text-[0.84rem] font-morebold uppercase ml-4">
+                    {item.name}
+                  </span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
